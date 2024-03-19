@@ -4,8 +4,8 @@ import { Exercise } from './exercise';
 export class StandUp implements ICommand {
   private exercise: Exercise;
 
-  constructor(position: Exercise) {
-    this.exercise = position;
+  constructor(exercise: Exercise) {
+    this.exercise = exercise;
   }
 
   execute(): string {
