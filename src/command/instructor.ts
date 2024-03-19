@@ -1,23 +1,23 @@
 import { ICommand } from './command';
 
 export class Instructor {
-    private exercise: ICommand | null = null;
+  private exercise: ICommand | null = null;
+  
+  setCommand(exercise: ICommand): void {
+    this.exercise = exercise;
+  }
 
-    setCommand(exercise: ICommand): void {
-        this.exercise = exercise;
+  do(): string {
+    if (!this.exercise) {
+      return '';  
     }
+    return this.exercise.execute();
+  }
 
-    do(): string {
-        if (!this.exercise) {
-            return '';  
-        }
-        return this.exercise.execute();
+  undo(): string {
+    if (!this.exercise) {
+      return '';
     }
-
-    undo(): string {
-        if (!this.exercise) {
-            return '';
-        }
-        return this.exercise.undo();
-    }
+    return this.exercise.undo();
+  }
 }
