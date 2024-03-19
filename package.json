@@ -1,0 +1,16 @@
+{
+  "name": "design-patterns-homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "Hristo Zagorliev",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2"
+  }
+}
